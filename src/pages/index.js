@@ -21,9 +21,9 @@ const IndexPage = ({ data }) => {
           <tbody>
             {data.allDodgyShopsCsv.edges.map(({ node }, index) => (
               <tr key={index}>
-                <td>{node.name}</td>
-                <td>{node.district}</td>
-                <td>{node.address}</td>
+                <td>{node.name_zh}</td>
+                <td>{node.sub_district_zh}</td>
+                <td>{node.address_zh}</td>
               </tr>
             ))}
           </tbody>
@@ -41,9 +41,9 @@ export const IndexQuery = graphql`
     allDodgyShopsCsv {
       edges {
         node {
-          name
-          district
-          address
+          name_zh
+          sub_district_zh
+          address_zh
           details
         }
       }
